@@ -1,0 +1,64 @@
+#bkg {
+    background-image: url('./bkg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 95vh;
+    width: 99vw;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    max-width: 83%;
+    padding-left: 35px;
+    padding-top: 135px;
+}
+
+.grid-item {
+    padding: 40px;
+    font-size: 30px;
+    text-align: center;
+    height: 35px;
+    width: 99px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.grid-item[style*="pointer-events: none"] {
+    cursor: not-allowed;
+    /* Définit le curseur comme non cliquable pour les cases désactivées */
+}
+
+.text-filled {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fond blanc opaque */
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.grid-item-large {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    grid-column: span 4;
+    cursor: help;
+}
+
+/* pour les emojis */
+.grid-item {
+    position: relative;
+}
+
+.emoji-selector {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
